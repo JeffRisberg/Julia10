@@ -5,7 +5,7 @@ const LINKS = String[]
 
 function fetchpage(url)
   response = HTTP.get(url)
-  if response.status == 200 && parse(Int, Dict(response.headers)["Content-Length"]) > 0
+  if response.status == 200
     String(response.body)
   else
     ""
